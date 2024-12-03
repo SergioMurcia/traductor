@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traductor Interactivo</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Traductor Interactivo</h1>
+        <div class="form-container">
+            <form action="">
+                <div class="form-group">
+                    <label for="idioma">Selecciona el idioma de destino:</label>
+                    <select id="idioma">
+                        <option value="ingles">Inglés</option>
+                        <option value="espanol">Español</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <h2>Palabra a traducir</h2>
+                    <input type="text" id="pobtenida" placeholder="Ingrese la palabra">
+                </div>
+
+                <div class="form-group">
+                    <input type="button" value="Traducir" id="traducir">
+                </div>
+
+                <div class="form-group">
+                    <label for="resultado">Resultado:</label>
+                    <textarea id="resultado" readonly></textarea>
+                </div>
+
+                <div class="form-group" id="categorias">
+                    <h3>Filtrar por categoría</h3>
+                    <label>
+                        <input type="radio" name="categoria" value="animals" id="animals"> Animales
+                    </label>
+                    <label>
+                        <input type="radio" name="categoria" value="fruits" id="fruits"> Frutas
+                    </label>
+                    <label>
+                        <input type="radio" name="categoria" value="colors" id="colors"> Colores
+                    </label>
+                    <label>
+                        <input type="radio" name="categoria" value="physical_descriptions" id="physical_descriptions"> Descripciones físicas
+                    </label>
+                    <label>
+                        <input type="radio" name="categoria" value="skills" id="skills"> Habilidades
+                    </label>
+                    <label>
+                        <input type="radio" name="categoria" value="verbs" id="verbs"> Verbos
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <input type="button" value="Mostrar palabras" id="mostrarPalabras">
+                </div>
+            </form>
+        </div>
+        <div id="palabrasDisponibles"></div>
+    </div>
+
+    <script type="module" src="scripts/app.js"></script>
+</body>
+</html>
